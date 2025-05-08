@@ -1,0 +1,142 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --surface-primary-color-surface: #9E7E27;
+  --surface-primary-color-surface-hovered: #CDA434;
+  --surface-primary-color-surface-pressed: #D1AB43;
+  --surface-primary-color-surface-disasable: #109444;
+  --surface-secondary-color-surface: #705743;
+  --surface-secondary-color-surface-hovered: #9B795D;
+  --surface-secondary-color-surface-pressed: #A27F63;
+  --surface-secondary-color-surface-disasable: #C9C8C3;
+  --background-color-background: #FFFFFF;
+  --background-color-background-hover: #E8E7E3;
+  --background-color-background-pressd: #E2E1DC;
+  --typo-color-text: #333333;
+  --typo-color-text-subtle: #505050;
+  --typo-color-text-subtlest: #6D6D6D;
+  --typo-color-text-inverse: #F0EFEB;
+  --typo-color-text-disabled: #A0A0A0;
+  --typo-color-text-selected: var(--states-info);
+  --typo-color-text-brand: #9E7E27;
+  --typo-color-text-success: var(--states-success);
+  --typo-color-text-danger: var(--states-danger);
+  --typo-color-text-warning: var(--states-warning);
+  --link-color-link: #CDA434;
+  --link-color-link-hovered: #E57373;
+  --link-color-link-pressed: #9B795D;
+  --border-color-border: #C5C5C5;
+  --border-color-border-inverse: #A8A8A8;
+  --border-color-border-disabled: #E2E2E2;
+  --border-color-border-focused: #6D6D6D;
+  --border-color-border-brand: #9E7E27;
+  --border-color-border-warning: var(--states-warning);
+  --border-color-border-success: var(--states-success);
+  --border-color-border-danger: var(--states-danger);
+  --states-danger: #D32F2F;
+  --states-warning: #FFCA40;
+  --states-success: #388E3C;
+  --states-info: #A282D5;
+
+/* Fonts */
+.Headings-H-1 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 68px;
+  letter-spacing: 0;
+  text-transform: none; /* ORIGINAL text case */
+}
+
+.Headings-H-2 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 56px;
+  letter-spacing: 0;
+  text-transform: none; /* ORIGINAL text case */
+}
+
+.Headings-H-3 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 46px;
+  letter-spacing: 0;
+  text-transform: none; /* ORIGINAL text case */
+}
+
+.Headings-H-4 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 38px;
+  letter-spacing: 0;
+  text-transform: none; /* ORIGINAL text case */
+}
+
+.Headings-H-5 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 32px;
+  letter-spacing: 0;
+  text-transform: none; /* ORIGINAL text case */
+}
+
+.Headings-H-6 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 26px;
+  letter-spacing: 0;
+  text-transform: none; /* ORIGINAL text case */
+}
+
+.Body-B-1 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 18px;
+  letter-spacing: 0;
+  text-transform: none; /* ORIGINAL text case */
+}
+
+.Body-B-2 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 16px;
+  letter-spacing: 0;
+  text-transform: none; /* ORIGINAL text case */
+}
+
+.Body-B-2-Bold {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500; /* Medium (assuming "Bold" here means Medium as per JSON) */
+  font-size: 16px;
+  letter-spacing: 0;
+  text-transform: none; /* ORIGINAL text case */
+}
+
+.Body-B-3 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 14px;
+  letter-spacing: 0;
+  text-transform: none; /* ORIGINAL text case */
+}
+
+.Body-B-3-Bold {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 14px;
+  letter-spacing: 0;
+  text-transform: none; /* ORIGINAL text case */
+}
+
+.Body-B-4 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 12px;
+  letter-spacing: 0;
+  text-transform: none; /* ORIGINAL text case */
+}
+.container {
+    padding: 0 116px;
+    background-color: var(--background-color-background);
+}
+  }
