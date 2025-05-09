@@ -4,10 +4,11 @@ import Primarybutton from "../primarybutton/Primarybutton";
 
 function Nav() {
   return (
-    <div className="fixed mt-6 top-0 left-0 right-0 
+ <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div className="fixed absolute mt-6 top-0 left-0 right-0 
     mx-auto w-[1080px] flex justify-between 
     bg-[var(--background-color-background)] 
-    px-[24px] py-[22] rounded-b-[16px] items-center h-[88px]">
+    px-[24px] py-[22] rounded-[16px] items-center h-[88px]">
       <img className="h-8" src={Logo} alt="Logo" />
       <div className="flex items-center h-full gap-[32px] Body-B-2-Bold">
         <a
@@ -28,11 +29,10 @@ function Nav() {
         >
           About Us
         </a>
-        <a href="#">
-          <Primarybutton />
-        </a>
+        <Primarybutton buttonText="Contact us" buttonLink="/contact"/>
       </div>
     </div>
+    </nav>
   );
 }
 

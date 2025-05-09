@@ -1,8 +1,10 @@
 import React from "react";
 
-const Primarybutton = () => {
+function Primarybutton({ buttonText, buttonLink }) {
+ 
   return (
-    <button
+ <>
+ <a href="{buttonLink}"><button
       className="cursor-pointer group relative 
     bg-[var(--surface-primary-color-surface)] hover:bg-[var(--surface-primary-color-surface-hovered)] 
     text-[var(--typo-color-text-inverse)]
@@ -14,15 +16,16 @@ const Primarybutton = () => {
             className="Body-B-2-Bold block transition-transform duration-300 
           group-hover:-translate-y-full"
           >
-            Contact Us
+           {buttonText}
           </span>
 
           <span className="Body-B-2-Bold absolute inset-0 transition-transform duration-300 translate-y-full group-hover:translate-y-0">
-            Contact Us
+          {buttonText}
           </span>
         </span>
       </div>
-    </button>
+    </button></a>
+ </>
   );
 };
 
