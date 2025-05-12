@@ -190,8 +190,8 @@ function Homepage() {
       </div>
 
       {/* CTA */}
-      <div className="flex gap-[8px] mt-[32px]"
-        className="container px-[5%] w-[90%] h-[90vh] min-h-[90vh] mx-auto mt-15 rounded-xl bg-cover bg-center"
+      <div
+        className="flex gap-[8px] mt-[32px] container px-[5%] w-[90%] h-[90vh] min-h-[90vh] mx-auto mt-15 rounded-xl bg-cover bg-center"
         style={{
           backgroundImage: `url(${bg})`,
           overflow: "hidden",
