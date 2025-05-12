@@ -1,12 +1,18 @@
 import React from "react";
 import heroImage from "../assets/heroimage.svg";
-import AboutImage from "../assets/About.svg"; // Import the About.svg image
+import bg from "../assets/BG.svg";
+import AboutImage from "../assets/About.svg";
 import Primarybutton from "../components/primarybutton/Primarybutton";
+import Footer from "../components/footer/Footer";
 import HousePlanning from "../assets/House_Planning.svg";
 import InteriorDesign1 from "../assets/Interior_Design-1.svg";
 import InteriorDesign from "../assets/Interior_Design.svg";
 import SpacePlanning from "../assets/Space_Planning.svg";
+import arrowright from "../assets/arrow-right.svg";
 import featured from "../assets/featured.mp4";
+import Recent_1 from "../assets/Recent_1.svg";
+import Recent_2 from "../assets/Recent_2.svg";
+import Recent_3 from "../assets/Recent_3.svg";
 
 function Homepage() {
   return (
@@ -60,7 +66,7 @@ function Homepage() {
       </div>
 
       {/* Services Section */}
-      <div className="container px-[5%] gap-[32px]">
+      <div className="px-[5%] container gap-[32px]">
         <h1 className="Headings-H-2 text-[var(--typo-color-text)] mb-[12px] text-center mb-[32px]">
           We are{" "}
           <span className="text-[var(--typo-color-text-brand)]">mastering</span>{" "}
@@ -114,7 +120,7 @@ function Homepage() {
 
           {/* Furnisher Design Card */}
           <div
-            className="bg-cover bg-center rounded-lg h-[448px] flex items-end p-[12px]"
+            className="px-[5%] container bg-cover bg-center rounded-lg h-[448px] flex items-end p-[12px]"
             style={{
               backgroundImage: `url(${InteriorDesign1})`,
             }}
@@ -130,7 +136,7 @@ function Homepage() {
       </div>
 
       {/* Featured Section */}
-      <div className="p-[5%] w-full h-auto overflow-hidden rounded-[16px]">
+      <div className="px-[5%] container  w-full h-auto overflow-hidden rounded-[16px]">
         <video
           className="w-full h-full object-none rounded-[8px]"
           style={{
@@ -144,6 +150,75 @@ function Homepage() {
           playsInline
         />
       </div>
+
+      {/* Recent */}
+      <div className="flex gap-[8px] mt-[32px]">
+        <div className="px-[5%] container w-[44%] h-auto overflow-hidden">
+          <h1 className="Headings-H-3 text-[var(--typo-color-text)]">
+            Our{" "}
+            <span className="text-[var(--typo-color-text-brand)]">Recent</span>{" "}
+            Projects to Inspire You
+          </h1>
+          <p className="Body-B-2">
+            Discover some of our favorite creations, where imagination meets
+            craftsmanship. From cozy retreats to bold statements, these projects
+            showcase the magic of Dreamscape.
+          </p>
+          <Primarybutton
+            buttonText={<img className="py-3 " src={arrowright} alt="arrow" />}
+            buttonLink="/contact"
+            className="rounded-full mt-[24px]"
+          />
+        </div>
+        <div className="flex gap-[8px] w-[50%] h-auto overflow-hidden">
+          <img
+            src={Recent_1}
+            alt="Featured"
+            className="overflow-hidden rounded-[16px]"
+          />
+          <img
+            src={Recent_2}
+            alt="Featured"
+            className="overflow-hidden rounded-[16px]"
+          />
+          <img
+            src={Recent_3}
+            alt="Featured"
+            className="overflow-hidden rounded-[16px]"
+          />
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="flex gap-[8px] mt-[32px]"
+        className="container px-[5%] w-[90%] h-[90vh] min-h-[90vh] mx-auto mt-15 rounded-xl bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${bg})`,
+          overflow: "hidden",
+        }}
+      >
+        <div className="flex justify-center items-center h-full w-full">
+          <div className="text-center w-[70%] flex flex-col items-center justify-center">
+            <h1 className="Headings-H-1 text-[var(--typo-color-text-inverse)]">
+              Ready to Create Your Dream Space
+            </h1>
+            <p className="mt-4 text-[var(--typo-color-text-inverse)]">
+              Let’s bring your vision to life with Dreamscape’s magic touch!
+              Contact us today to start designing a room that’s uniquely yours,
+              filled with wonder and charm.
+            </p>
+            <Primarybutton
+              buttonText="Get Started"
+              buttonLink="/contact"
+              className="mt-[24px]"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+
+      <Footer />
     </>
   );
 }
