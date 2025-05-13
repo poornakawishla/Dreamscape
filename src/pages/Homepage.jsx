@@ -19,31 +19,32 @@ function Homepage() {
     <>
       {/* Hero Section */}
       <div
-        className="container px-[5%] w-[90%] md:h-[90vh] min-h-[90vh] mx-auto mt-15 rounded-xl bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          overflow: "hidden",
-        }}
-      >
-        <div className="flex flex-col md:m[88px] md:flex-row justify-between items-center h-full w-[100%] pb-[64px] text-[var(--typo-color-text-inverse)]">
-          <div className="text-left self-end w-full md:w-[70%]">
-            <h1 className="Headings-H-1 text-[var(--typo-color-text-inverse)]">
-              Build Your Dream Room <br /> with Dreamscape
-            </h1>
-          </div>
-          <div className="text-left md:text-right flex flex-col items-start md:items-end gap-4 self-end pb-8">
-            <p className="Body-B-3 text-[var(--typo-color-text-subtlest)] max-w-xs">
-              Unleash your imagination with custom designs that transform your
-              space into a magical retreat, from enchanted forests to cosmic
-              lofts
-            </p>
-            <Primarybutton buttonText="Get Started" buttonLink="/contact" />
-          </div>
-        </div>
-      </div>
+  id="hero"
+  className="animate container px-[5%] w-[90%] md:h-[90vh] min-h-[90vh] mx-auto mt-15 rounded-xl bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${heroImage})`,
+    overflow: "hidden",
+  }}
+>
+  <div className="flex flex-col md:flex-row justify-between items-center h-full w-[100%] pb-[5%] text-[var(--typo-color-text-inverse)] custom-hero-content">
+    <div className="text-left self-end w-full md:w-[70%]">
+      <h1 className="Headings-H-1 text-[var(--typo-color-text-inverse)]">
+        Build Your Dream Room <br /> with Dreamscape
+      </h1>
+    </div>
+    <div className="text-left md:text-right flex flex-col items-start md:items-end gap-4 self-end pb-8">
+      <p className="Body-B-3 text-[var(--typo-color-text-subtlest)] max-w-xs">
+        Unleash your imagination with custom designs that transform your
+        space into a magical retreat, from enchanted forests to cosmic
+        lofts
+      </p>
+      <Primarybutton buttonText="Get Started" buttonLink="/contact" />
+    </div>
+  </div>
+</div>
 
       {/* About Section */}
-      <div className="container px-[5%] flex flex-col md:flex-row gap-[32px]">
+      <div id="About" className="animate container px-[5%] flex flex-col md:flex-row gap-[32px]">
         <div className="w-full md:w-auto">
           <img src={AboutImage} alt="About" className="w-full h-auto" />
         </div>
@@ -63,7 +64,7 @@ function Homepage() {
       </div>
 
       {/* Services Section */}
-      <div className="px-[5%] container gap-[32px]">
+      <div className="px-[5%] animate container gap-[32px]">
         <h1 className="Headings-H-2 text-[var(--typo-color-text)] mb-[12px] text-center">
           We are{" "}
           <span className="text-[var(--typo-color-text-brand)]">mastering</span>{" "}
@@ -133,7 +134,7 @@ function Homepage() {
       </div>
 
       {/* Featured Section */}
-      <div className="px-[5%] container  w-full h-auto overflow-hidden rounded-[16px]">
+      <div className="px-[5%] animate container  w-full h-auto overflow-hidden rounded-[16px]">
         <video
           className="w-full h-full object-none rounded-[8px]"
           style={{
@@ -149,7 +150,7 @@ function Homepage() {
       </div>
 
       {/* Recent */}
-      <div className="flex flex-col lg:flex-row gap-[8px] mt-[32px]">
+      <div id="recents" className="animate flex flex-col lg:flex-row gap-[8px] mt-[32px]">
         <div className="px-[5%] container w-full lg:w-[44%] h-auto overflow-hidden">
           <h1 className="Headings-H-3 text-[var(--typo-color-text)]">
             Our{" "}
@@ -187,7 +188,7 @@ function Homepage() {
 
       {/* CTA */}
       <div
-        className="flex flex-col justify-center items-center gap-[8px] mt-[32px] container px-[5%] w-[90%] h-[90vh] min-h-[90vh] mx-auto rounded-xl bg-cover bg-center"
+        className="animate flex flex-col justify-center items-center gap-[8px] mt-[32px] container px-[5%] w-[90%] h-[90vh] min-h-[90vh] mx-auto rounded-xl bg-cover bg-center"
         style={{
           backgroundImage: `url(${bg})`,
           overflow: "hidden",
@@ -209,8 +210,7 @@ function Homepage() {
       </div>
 
       {/* Footer */}
-
-      <Footer />
+     <Footer className="animate"></Footer>
     </>
   );
 }

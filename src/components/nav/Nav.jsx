@@ -2,12 +2,23 @@ import React, { useState } from "react";
 import Logo from "../../assets/logo.svg";
 import Primarybutton from "../primarybutton/Primarybutton";
 
-
 function Nav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navbarHeight = 158; // 88px (navbar height) + 60px (mt-15)
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - navbarHeight,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -22,27 +33,29 @@ function Nav() {
         "
       >
         {/* Logo */}
-        <img className="h-8" src={Logo} alt="Logo" />
+        <a onClick={(e) => handleScroll(e, "hero")} className="cursor-pointer ">
+          <img className="h-8" src={Logo} alt="Logo" />
+        </a>
 
         {/* Navbar Links & Button */}
         <div className="flex items-center gap-8 Body-B-2-Bold">
           {/* Navbar Links (Desktop) */}
           <div className="hidden md:flex gap-8">
             <a
-              href="#home"
-              className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
+              onClick={(e) => handleScroll(e, "hero")}
+              className="relative after:content-[''] cursor-pointer after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
             >
               Home
             </a>
             <a
-              href="#designs"
-              className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
+              onClick={(e) => handleScroll(e, "recents")}
+              className="relative after:content-[''] cursor-pointer after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
             >
               Designs
             </a>
             <a
-              href="#about"
-              className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
+              onClick={(e) => handleScroll(e, "About")}
+              className="relative after:content-[''] cursor-pointer after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
             >
               About Us
             </a>
@@ -101,17 +114,37 @@ function Nav() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen ? "max-h-screen opacity-100 mx-[10%]" : "max-h-0 opacity-0"
+          isMobileMenuOpen
+            ? "max-h-screen opacity-100 mx-[10%]"
+            : "max-h-0 opacity-0"
         }`}
       >
         <div className="flex flex-col px-[10%] gap-6 p-6 pb-20 rounded-[16px] mt-25 z-20">
-          <a href="#home" className="text-black hover:text-blue-600">
+          <a
+            onClick={(e) => {
+              handleScroll(e, "hero");
+              setIsMobileMenuOpen(false);
+            }}
+            className="text-black hover:text-blue-600"
+          >
             Home
           </a>
-          <a href="#designs" className="text-black hover:text-blue-600">
+          <a
+            onClick={(e) => {
+              handleScroll(e, "recents");
+              setIsMobileMenuOpen(false);
+            }}
+            className="text-black hover:text-blue-600"
+          >
             Designs
           </a>
-          <a href="#about" className="text-black hover:text-blue-600">
+          <a
+            onClick={(e) => {
+              handleScroll(e, "About");
+              setIsMobileMenuOpen(false);
+            }}
+            className="text-black hover:text-blue-600"
+          >
             About Us
           </a>
           {/* No Primarybutton in mobile menu */}
