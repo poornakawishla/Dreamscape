@@ -33,7 +33,9 @@ function Homepage() {
           </div>
           <div className="text-left md:text-right flex flex-col items-start md:items-end gap-4 self-end pb-8">
             <p className="Body-B-3 text-[var(--typo-color-text-subtlest)] max-w-xs">
-              Unleash your imagination with custom designs that transform your space into a magical retreat, from enchanted forests to cosmic lofts
+              Unleash your imagination with custom designs that transform your
+              space into a magical retreat, from enchanted forests to cosmic
+              lofts
             </p>
             <Primarybutton buttonText="Get Started" buttonLink="/contact" />
           </div>
@@ -48,10 +50,13 @@ function Homepage() {
         <div className="w-full md:w-[50%]">
           <h1 className="Headings-H-2 text-[var(--typo-color-text)] mb-[12px]">
             Do you know{" "}
-            <span className="text-[var(--typo-color-text-brand)]">About us</span>
+            <span className="text-[var(--typo-color-text-brand)]">
+              About us
+            </span>
           </h1>
           <p className="Body-B-3 text-[var(--typo-color-text-subtle)] mb-[16px]">
-            At Dreamscape, we blend artistry with innovation to create personalized living spaces that reflect your unique story...
+            At Dreamscape, we blend artistry with innovation to create
+            personalized living spaces that reflect your unique story...
           </p>
           <Primarybutton buttonText="Learn More" buttonLink="/about" />
         </div>
@@ -152,7 +157,8 @@ function Homepage() {
             Projects to Inspire You
           </h1>
           <p className="Body-B-2">
-            Discover some of our favorite creations, where imagination meets craftsmanship...
+            Discover some of our favorite creations, where imagination meets
+            craftsmanship...
           </p>
           <Primarybutton
             buttonText={<img className="py-3" src={arrowright} alt="arrow" />}
