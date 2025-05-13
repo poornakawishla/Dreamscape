@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../../assets/logo.svg";
 import Primarybutton from "../primarybutton/Primarybutton";
-import { Link } from "react-router-dom";
+
 
 function Nav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Primarybutton({ buttonText, buttonLink, className }) {
   return (
-    <a href={buttonLink}>
+    <Link to={buttonLink} className={`inline-block ${className}`}>
       <button
         className={`cursor-pointer group relative 
           bg-[var(--surface-primary-color-surface)] hover:bg-[var(--surface-primary-color-surface-hovered)] 
           text-[var(--typo-color-text-inverse)]
-          px-6 py-3 rounded-[8px] transition-all duration-200 ease-in-out w-auto h-auto
-          ${className}`}
+          px-6 py-3 rounded-[8px] transition-all duration-200 ease-in-out w-auto h-auto`}
+        aria-label={buttonText}
       >
         <div className="relative flex items-center justify-center gap-2">
           <span className="relative inline-block overflow-hidden">
@@ -24,7 +25,7 @@ function Primarybutton({ buttonText, buttonLink, className }) {
           </span>
         </div>
       </button>
-    </a>
+    </Link>
   );
 }
 
